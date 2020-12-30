@@ -1,15 +1,18 @@
 const http = require('http');
 const express = require('express');
+const morgan = require('morgan');
 const es6Renderer = require('express-es6-template-engine');
 
 const app = express();
 const server = http.createServer(app);
+const logger = morgan('tiny');
 
 const homeRouter = require('./routers/home-router');
 
 const port = 3000;
 const host = 'localhost';
 
+app.use(logger);
 app.engine('html', es6Renderer);
 app.set('views', 'templates');
 app.set('view engine', 'html');
