@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const http = require('http');
 const express = require('express');
 const morgan = require('morgan');
@@ -25,7 +27,9 @@ app.use('/', homeRouter);
 
 // rendering members routers
 
-//
+// rendering accounts routers
+
+// rendering books routers
 
 server.listen(port, host, () => {
 	console.log(`Listening at http://${host}:${port}`);
