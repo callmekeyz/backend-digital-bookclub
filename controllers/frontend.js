@@ -2,9 +2,9 @@ const homeController = (req, res) => {
 	res.render('home');
 };
 
-const aboutController = (req, res) => {
-	res.render('about');
-};
+// const aboutController = (req, res) => {
+// 	res.render('about');
+// };
 
 const contactController = (req, res) => {
 	res.render('contact');
@@ -23,7 +23,7 @@ const signupController = (req, res) => {
 
 module.exports = {
 	homeController,
-	aboutController,
+	// aboutController,
 	contactController,
 	exploreController,
 	loginController,

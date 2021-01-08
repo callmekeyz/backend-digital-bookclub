@@ -4,7 +4,7 @@ const router = express.Router();
 // importing front end controller functions
 const {
 	homeController,
-	aboutController,
+	// aboutController,
 	contactController,
 	exploreController,
 	loginController,
@@ -14,8 +14,8 @@ const {
 // main home page
 router.get('/', homeController);
 
-// about page
-router.get('/about', aboutController);
+// // about page
+// router.get('/about', aboutController);
 
 // contact page
 router.get('/contact', contactController);

@@ -2,29 +2,40 @@
 
 ### Member
 
-- Member has many Books
-- Member has one Account
-
-### Account
-
-- Accounts belongs to Member
+- Member has many Books (Pk)
 
 ### Book
 
-- Books belong to many Members
+- Book belong to many Members
+- Book has many comments (through bookId)
 
 ### Comment
 
-- Comments belong to many Members
+- Comment belongs to many Members
+- Comment belongs to Book (through bookId)
 
 ---
 
-## Attributes
+## Model Attributes
 
 ### Member
 
-### Account
+(id- Primary Key)
+
+- first name
+- last name
+- email
+- password
 
 ### Book
 
+- title
+- author
+- genre
+- ISBN
+
 ### Comments
+
+(commentId - Foreign Key)
+
+- strings
