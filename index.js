@@ -13,7 +13,8 @@ const port = 3000;
 const host = 'localhost';
 
 // routers
-const homeRouter = require('./routers/frontend');
+const frontendRouter = require('./routers/frontend');
+const memberRouter = require('./routers/member');
 
 app.use(logger);
 
@@ -23,13 +24,10 @@ app.set('views', 'templates');
 app.set('view engine', 'html');
 
 // rendering frontend routers
-app.use('/', homeRouter);
+app.use('/', frontendRouter);
 
 // rendering members routers
-
-// rendering accounts routers
-
-// rendering books routers
+app.use('/', memberRouter);
 
 server.listen(port, host, () => {
 	console.log(`Listening at http://${host}:${port}`);
