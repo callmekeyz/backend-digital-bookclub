@@ -15,6 +15,7 @@ const host = 'localhost';
 // routers
 const frontendRouter = require('./routers/frontend');
 const memberRouter = require('./routers/member');
+const userRouter = require('./routers/user');
 
 app.use(logger);
 
@@ -26,8 +27,11 @@ app.set('view engine', 'html');
 // rendering frontend routers
 app.use('/', frontendRouter);
 
-// rendering members routers
+// rendering member activity routers
 app.use('/', memberRouter);
+
+// rendering user-account activity routers
+app.use('/', userRouter);
 
 server.listen(port, host, () => {
 	console.log(`Listening at http://${host}:${port}`);
