@@ -1,12 +1,12 @@
-const homeController = (req, res) => {
-	res.render('home');
-};
+// const homeController = (req, res) => {
+// 	res.render('home');
+// };
 
-const exploreController = (req, res) => {
-	res.render('explore');
-};
+// const exploreController = (req, res) => {
+// 	res.render('explore');
+// };
 
-module.exports = {
-	homeController,
-	exploreController,
-};
+// module.exports = {
+// 	homeController,
+// 	exploreController,
+// };
