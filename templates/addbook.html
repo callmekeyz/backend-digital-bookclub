@@ -1,0 +1,37 @@
+${header}
+<html>
+	<h1>${title}</h1>
+
+	<form method="POST">
+        <div class="form-group">
+            <label>
+                Title:
+                <input name="title" type="text" autofocus />
+            </label>
+        </div>
+    </br>
+        <div class="form-group">
+            <label>
+                Author:
+                <input name="author" type="text" />
+            </label>
+        </div>
+    </br>
+         <div class="form-group">
+            <label for="status">
+                Status: 
+            <select id="status" name="status">
+                <option value="choice-1">Purchased</option>
+                <option value="choice-2">Currently Reading</option>
+                <option value="choice-3">Completed</option>
+            </select>
+        </label>
+            </div>
+        </div>
+    </br>
+
+		<input type="submit" value="Submit" />
+	</form>
+</html>
+
+${footer}
