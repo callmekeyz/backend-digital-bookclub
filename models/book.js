@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
 			Book.hasMany(models.Post, {
 				foreignKey: 'bookId',
 			});
-			Book.hasOne(models.Member, {
+			Book.belongsTo(models.Member, {
 				foreignKey: 'memberId',
 			});
 		}
@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
 			genre: DataTypes.STRING,
 			isbn: DataTypes.STRING,
 			status: DataTypes.STRING,
+			memberId: DataTypes.INTEGER,
 		},
 		{
 			sequelize,

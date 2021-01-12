@@ -16,7 +16,7 @@ const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 
 // routers
-const frontendRouter = require('./routers/frontend');
+// const frontendRouter = require('./routers/frontend');
 const memberRouter = require('./routers/member');
 const userRouter = require('./routers/user');
 
@@ -44,7 +44,7 @@ app.use(
 );
 
 // rendering frontend routers
-app.use('/', frontendRouter);
+// app.use('/', frontendRouter);
 
 // rendering member activity routers
 app.use('/member', memberRouter);

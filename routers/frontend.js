@@ -1,16 +1,16 @@
-const express = require('express');
-const router = express.Router();
+// const express = require('express');
+// const router = express.Router();
 
-// importing front end controller functions
-const {
-	homeController,
-	exploreController,
-} = require('../controllers/frontend');
+// // importing front end controller functions
+// const {
+// 	homeController,
+// 	exploreController,
+// } = require('../controllers/frontend');
 
-// main home page
-router.get('/', homeController);
+// // main home page
+// router.get('/', homeController);
 
-// explore page
-router.get('/explore', exploreController);
+// // explore page
+// router.get('/explore', exploreController);
 
-module.exports = router;
+// module.exports = router;

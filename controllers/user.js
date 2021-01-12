@@ -14,6 +14,7 @@ const newUser = (req, res) => {
 const processNewUser = async (req, res) => {
 	const { username, password, firstname, lastname } = req.body;
 	console.log(username, password);
+	console.log('**************');
 	if (username == '' || password == '') {
 		// informs user of required info
 		console.log('username or password is blank', req.baseUrl);
@@ -26,8 +27,9 @@ const processNewUser = async (req, res) => {
 				firstname,
 				lastname,
 				username,
-				hash,
+				password: hash,
 			});
+			console.log(newUser);
 			res.redirect(`${req.baseUrl}/home`);
 		} catch (e) {
 			// e.name will be "SequelizeUniqueConstraintError"
@@ -65,11 +67,12 @@ const processLogin = async (req, res) => {
 	});
 	if (user) {
 		console.log('valid user...checking password');
-		const isValid = bcrypt.compareSync(password, user.hash);
+		const isValid = bcrypt.compareSync(password, user.password);
 		if (isValid) {
 			console.log('password is good!');
 			req.session.user = {
 				username,
+				id: user.id,
 			};
 			req.session.save(() => {
 				res.redirect('/member-profile');
