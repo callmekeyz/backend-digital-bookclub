@@ -16,9 +16,10 @@ const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 
 // routers
-// const frontendRouter = require('./routers/frontend');
+
 const memberRouter = require('./routers/member');
 const userRouter = require('./routers/user');
+const bookRouter = require('./routers/book');
 
 app.use(logger);
 
@@ -51,6 +52,9 @@ app.use('/member', memberRouter);
 
 // rendering user-account activity routers
 app.use('/user', userRouter);
+
+// rednering book-activity routers
+app.use('/book', bookRouter);
 
 server.listen(port, host, () => {
 	console.log(`Listening at http://${host}:${port}`);
