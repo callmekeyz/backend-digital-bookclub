@@ -8,6 +8,5 @@ const exploreController = (req, res) => {
 
 module.exports = {
 	homeController,
-	createController,
 	exploreController,
 };

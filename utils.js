@@ -1,7 +1,7 @@
 const layout = {
 	partials: {
-		header: '/partials/header',
-		footer: '/partials/footer',
+		header: 'partials/header',
+		footer: 'partials/footer',
 	},
 };
 
