@@ -7,4 +7,10 @@ router
 	.get('/new', userController.newUser)
 	.post('/new', userController.processNewUser);
 
-router.get('/login', userController.login).post('/login');
+router
+	.get('/home', userController.login)
+	.post('/home', userController.processLogin);
+
+router.get('/logout', userController.logout);
+
+module.exports = router;
