@@ -8,8 +8,8 @@ router
 	.post('/new', userController.processNewUser);
 
 router
-	.get('/login', userController.login)
-	.post('/login', userController.processLogin);
+	.get('/home', userController.login)
+	.post('/home', userController.processLogin);
 
 router.get('/logout', userController.logout);
 
