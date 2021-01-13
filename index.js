@@ -32,12 +32,12 @@ app.set('view engine', 'html');
 
 app.use(
 	session({
-		store: new FileStore(), // no options for now
+		store: new FileStore({ logFn: function () {} }),
+		// store: new FileStore(),  // no options for now
 		secret: process.env.SESSION_SECRET,
 		saveUninitialized: false,
 		resave: true,
 		rolling: true,
-		//maxAge: 1000 * 60 * 60 * 24 * 7,
 		cookie: {
 			maxAge: 1000 * 60 * 60 * 24 * 7,
 		},
