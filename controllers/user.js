@@ -87,7 +87,7 @@ const processLogin = async (req, res) => {
 				id: user.id,
 			};
 			req.session.save(() => {
-				res.redirect(`/member-profile`);
+				res.redirect(`/user/member-profile`);
 			});
 		} else {
 			console.log('but password is wrong');
@@ -100,7 +100,7 @@ const processLogin = async (req, res) => {
 };
 
 const profileController = (req, res) => {
-	res.redirect(`${req.baseUrl}/member-profile`);
+	// res.redirect(`${req.baseUrl}/member-profile`);
 	res.render('member-profile');
 };
 
