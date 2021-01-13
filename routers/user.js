@@ -9,7 +9,9 @@ router
 
 router
 	.get('/home', userController.login)
-	.post('/home', userController.processLogin);
+	.post('/home', userController.processLogin)
+	.get('/member-profile', userController.profileController)
+
 
 router.get('/logout', userController.logout);
 
