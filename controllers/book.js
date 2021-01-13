@@ -17,7 +17,8 @@ const bookForm = (req, res) => {
 const processBookForm = async (req, res) => {
 	const {
 		title,
-		author
+		author,
+		status,
 	} = req.body;
 	const {
 		id
@@ -33,7 +34,7 @@ const processBookForm = async (req, res) => {
 		});
 		console.log(newBook);
 		req.session.save(() => {
-			res.redirect('/member-profile');
+			res.redirect('/user/member-profile');
 		});
 	}
 };
