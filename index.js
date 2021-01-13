@@ -17,13 +17,15 @@ const FileStore = require('session-file-store')(session);
 
 // routers
 
-const memberRouter = require('./routers/member');
+// const memberRouter = require('./routers/member');
 const userRouter = require('./routers/user');
 const bookRouter = require('./routers/book');
 
 app.use(logger);
 
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({
+	extended: true
+}));
 
 // HTML template engine
 app.engine('html', es6Renderer);
@@ -32,7 +34,9 @@ app.set('view engine', 'html');
 
 app.use(
 	session({
-		store: new FileStore({ logFn: function () {} }),
+		store: new FileStore({
+			logFn: function () {}
+		}),
 		// store: new FileStore(),  // no options for now
 		secret: process.env.SESSION_SECRET,
 		saveUninitialized: false,
@@ -48,7 +52,7 @@ app.use(
 // app.use('/', frontendRouter);
 
 // rendering member activity routers
-app.use('/member', memberRouter);
+// app.use('/member', memberRouter);
 
 // rendering user-account activity routers
 app.use('/user', userRouter);

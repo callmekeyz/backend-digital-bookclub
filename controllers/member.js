@@ -1,7 +1,3 @@
-const profileController = (req, res) => {
-	res.render('member-profile');
-};
-
 const bookController = (req, res) => {
 	res.render('book');
 };
@@ -11,7 +7,6 @@ const signoutController = (req, res) => {
 };
 
 module.exports = {
-	profileController,
 	bookController,
 	signoutController,
 };
