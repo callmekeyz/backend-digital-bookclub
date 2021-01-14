@@ -1,12 +1,23 @@
-const bookController = (req, res) => {
-	res.render('book');
+const { Post } = require('../models');
+const { layout } = require('../utils');
+
+// show member comments on books
+const showJournal = (req, res) => {
+	res.render('journal');
 };
 
-const signoutController = (req, res) => {
-	res.render('signout');
+// post comment
+
+// delete comment
+
+// edit comment
+
+// show wishlist status books only
+const showWishlist = (req, res) => {
+	res.render('wishlist');
 };
 
 module.exports = {
-	bookController,
-	signoutController,
+	showJournal,
+	showWishlist,
 };

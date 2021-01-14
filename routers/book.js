@@ -10,7 +10,7 @@ const {
 } = require('../controllers/book');
 
 router
-	.get('/', showBookList)
+	.get('/booklist', showBookList)
 	.get('/newbook', bookForm)
 	.post('/newbook', processBookForm)
 	.post('/:bookId/delete', delBook)
