@@ -11,6 +11,16 @@
 		href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
 	<link rel="stylesgeet"
 		href="https://rawgit.com/creativetimofficial/material-kit/master/assets/css/material-kit.css">
+	<style>
+		/* .navbar-translate {
+			color: #8811c5;
+		} */
+
+		.title {
+			color: #8811c5;
+
+		}
+	</style>
 </head>
 
 <body class="profile-page">
@@ -18,8 +28,7 @@
 		id="sectionsNav">
 		<div class="container">
 			<div class="navbar-translate">
-				<a class="navbar-brand" href="https://demos.creative-tim.com/material-kit/index.html"
-					target="_blank">Reader Profile </a>
+				<a class="navbar-brand" target="_blank">Reader Profile </a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
 					aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -35,12 +44,11 @@
 							<i class="material-icons">apps</i> Navigation
 						</a>
 						<div class="dropdown-menu dropdown-with-icons">
-							<a href="../index.html" class="dropdown-item">
-								<i class="material-icons">layers</i> Home
+							<a href="explore" class="dropdown-item">
+								<i class="material-icons">layers</i> Explore
 							</a>
 
-							<a href="https://demos.creative-tim.com/material-kit/docs/2.0/getting-started/introduction.html"
-								class="dropdown-item">
+							<a href="logout" class="dropdown-item">
 								<i class="material-icons">content_paste</i> Sign Out
 							</a>
 						</div>
@@ -59,11 +67,11 @@
 					<div class="col-md-6 ml-auto mr-auto">
 						<div class="profile">
 							<div class="avatar">
-								<img src="https://t4.ftcdn.net/jpg/01/65/98/53/360_F_165985319_GPU5ALSAgJkkJ0rRE2V1d8plcen3aANg.jpg"
-									alt="Circle Image" class="img-raised rounded-circle img-fluid">
+								<img src="/backend-digital-bookclub/images/open-book.jpg" alt="Circle Image"
+									class="img-raised rounded-circle img-fluid">
 							</div>
 							<div class="name">
-								<h3 class="title">Sarina Lyons</h3>
+								<h3 class="title">(Member Name)</h3>
 								<h6>Member</h6>
 							</div>
 						</div>
@@ -77,25 +85,29 @@
 						<div class="profile-tabs">
 							<ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
 								<li class="nav-item">
-									<a class="nav-link" href="#favorite" role="tab" data-toggle="tab">
+									<a class="nav-link" href="/backend-digital-bookclub/templates/addbook.html"
+										role="tab">
 										<i class="material-icons">add</i>
 										Add Book
 									</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link active" href="#studio" role="tab" data-toggle="tab">
+									<a class="nav-link active" href="/backend-digital-bookclub/templates/booklist.html"
+										role="tab">
 										<i class="material-icons">menu_book</i>
 										Booklist
 									</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#works" role="tab" data-toggle="tab">
+									<a class="nav-link" href="/backend-digital-bookclub/templates/journal.html"
+										role="tab">
 										<i class="material-icons">create</i>
 										Journal
 									</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#favorite" role="tab" data-toggle="tab">
+									<a class="nav-link" href="/backend-digital-bookclub/templates/wishlist.html"
+										role="tab">
 										<i class="material-icons">favorite</i>
 										Wishlist
 									</a>
@@ -112,8 +124,7 @@
 		</div>
 
 		<footer class="footer text-center ">
-			<p>Made with <a href="https://demos.creative-tim.com/material-kit/index.html" target="_blank">Member Kit</a>
-			</p>
+
 		</footer>
 
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

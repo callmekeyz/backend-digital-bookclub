@@ -10,9 +10,10 @@ router
 router
 	.get('/home', userController.login)
 	.post('/home', userController.processLogin)
-	.get('/member-profile', userController.profileController)
+	.get('/member-profile', userController.profileController);
 
-
-router.get('/logout', userController.logout);
+router
+	.get('/logout', userController.logout)
+	.get('/explore', userController.explore);
 
 module.exports = router;
