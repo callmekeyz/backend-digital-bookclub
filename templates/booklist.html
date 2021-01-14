@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Book List</title>
+	</head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Book List</title>
-</head>
-
-<body>
-	<h1>View member book list</h1>
-	<ul>
-		${ books.map(b => `
-		<li>
-			<a href="/book/${b.id}/"> ${b.title} </a>
-			<!-- ${ b.book ? b.book.title : '' } -->
-		</li>
-		`).join('') }
-	</ul>
-</body>
-
+	<body>
+		<h1>View member book list</h1>
+		<ul>
+			${ books.map(b => `
+			<li>
+				<a href="/book/${b.bookId}/booklist"> ${b.title} </a>
+				(${b.status})
+			</li>
+			`).join('') }
+		</ul>
+		<p><a href="member-profile">Back to Profile</a></p>
+	</body>
 </html>

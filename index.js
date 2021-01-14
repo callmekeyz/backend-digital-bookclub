@@ -20,12 +20,15 @@ const FileStore = require('session-file-store')(session);
 // const memberRouter = require('./routers/member');
 const userRouter = require('./routers/user');
 const bookRouter = require('./routers/book');
+const memberRouter = require('./routers/member');
 
 app.use(logger);
 
-app.use(express.urlencoded({
-	extended: true
-}));
+app.use(
+	express.urlencoded({
+		extended: true,
+	})
+);
 
 // HTML template engine
 app.engine('html', es6Renderer);
@@ -35,9 +38,8 @@ app.set('view engine', 'html');
 app.use(
 	session({
 		store: new FileStore({
-			logFn: function () {}
+			logFn: function () {},
 		}),
-		// store: new FileStore(),  // no options for now
 		secret: process.env.SESSION_SECRET,
 		saveUninitialized: false,
 		resave: true,
@@ -48,17 +50,14 @@ app.use(
 	})
 );
 
-// rendering frontend routers
-// app.use('/', frontendRouter);
-
-// rendering member activity routers
-// app.use('/member', memberRouter);
-
 // rendering user-account activity routers
-app.use('/user', userRouter);
+app.use('/', userRouter);
 
 // rednering book-activity routers
-app.use('/book', bookRouter);
+app.use('/', bookRouter);
+
+// rendering journal-activity routers
+app.use('/post', memberRouter);
 
 server.listen(port, host, () => {
 	console.log(`Listening at http://${host}:${port}`);
