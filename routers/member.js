@@ -1,18 +1,11 @@
 const express = require('express');
-const {
-	profileController,
-	bookController,
-	signoutController,
-} = require('../controllers/member');
 const router = express.Router();
 
-// member profile page
-router.get('/profile', profileController);
+const { showJournal, showWishlist, explore } = require('../controllers/member');
 
-// view book page
-router.get('/book', bookController);
-
-// sign out page
-router.get('/signout', signoutController);
+router
+	.get('/journal', showJournal)
+	// .post('/journal', postEntry)
+	.get('/wishlist', showWishlist);
 
 module.exports = router;
