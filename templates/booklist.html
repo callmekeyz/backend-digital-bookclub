@@ -9,14 +9,6 @@
 
 <body>
 	<h1>View member book list</h1>
-	<ul>
-		${ books.map(b => `
-		<li>
-			<a href="/book/${b.id}/"> ${b.title} </a>
-			<!-- ${ b.book ? b.book.title : '' } -->
-		</li>
-		`).join('') }
-	</ul>
 </body>
 
 </html>
