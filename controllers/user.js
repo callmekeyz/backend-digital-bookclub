@@ -99,7 +99,7 @@ const logout = (req, res) => {
 	console.log('logging out...');
 	req.session.destroy(() => {
 		// deleting session:
-		res.redirect('/user/home');
+		res.redirect('/home');
 	});
 };
 

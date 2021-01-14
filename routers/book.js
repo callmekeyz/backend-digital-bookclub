@@ -7,6 +7,7 @@ const {
 	delBook,
 	showEditList,
 	processEditList,
+	viewBook,
 } = require('../controllers/book');
 
 router
@@ -15,6 +16,7 @@ router
 	.post('/newbook', processBookForm)
 	.post('/:bookId/delete', delBook)
 	.get('/:bookId/edit', showEditList)
-	.post('/:bookId/edit', processEditList);
+	.post('/:bookId/edit', processEditList)
+	.get('/:bookId/viewbook', viewBook);
 
 module.exports = router;
