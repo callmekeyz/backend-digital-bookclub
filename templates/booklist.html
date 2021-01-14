@@ -10,10 +10,13 @@
 		<h1>View member book list</h1>
 		<ul>
 			${ books.map(b => `
+
 			<li>
-				<a href="/book/${b.bookId}/booklist"> ${b.title} </a>
-				(${b.status})
+				<div>
+					<a href="${b.id}/viewbook"> ${b.title} </a>
+				</div>
 			</li>
+
 			`).join('') }
 		</ul>
 		<p><a href="member-profile">Back to Profile</a></p>
