@@ -12,6 +12,7 @@
 	<link rel="stylesgeet"
 		href="https://rawgit.com/creativetimofficial/material-kit/master/assets/css/material-kit.css">
 	<style>
+		
 		/* .container {
 			display: flex;
 			flex-direction: row;
@@ -25,18 +26,25 @@
 		} */
 
 		.jumbotron {
-			color: white;
+			color: #CCB73C;
 			font-family: "Roboto";
 			background-image: url("/backend-digital-bookclub/images/login.jpg");
-			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
-			height: 100vh;
+			height: 150vh;
+			width: 200vh;
 		}
 
-		.form-group {
-			color: white;
+		.display-4 {
+			color: rgb(243, 235, 117);
+			font-family: "Roboto";
+			display: wrap;
+			font-size: 180px;
+			font-weight:400;
+			
+				
 		}
+
 	</style>
 </head>
 
@@ -48,17 +56,18 @@
 	<div class="main main-raised">
 		<div class="profile-content">
 			<div class="container">
-				<html>
 
-				<body>
-					<div class="jumbotron jumbotron-fluid">
+					<header>
+						<!-- <h1>Soul Reads</h1> -->
+					  </header>
+					<div class="jumbotron jumbotron-fluid" >
 						<div class="container">
 							<h1 class="display-4">SOUL READS</h1>
 
 							<div class="container">
 								<form align="left" method="POST">
 									<div class="form-group">
-										<label for="username">Username</label>
+										<label for="username"></label>Username</label>
 										<input name="username" type="text" class="form-control" id="username"
 											placeholder="Enter username" autofocus />
 									</div>
@@ -72,80 +81,16 @@
 									<input type="submit" class="submit-button" value="Submit">
 									</br>
 									<p><a href="#">Forgot password?</a></p>
-									<p><a href="new">Create an Account</a></p>
+									<p><a href="/backend-digital-bookclub/templates/create-acct.html">Create an Account</a></p>
 								</form>
 							</div>
+	
 						</div>
 					</div>
-
-
-
 			</div>
 </body>
 
-</html>
 
-
-<!-- <div class="row">
-					<div class="col-md-6 ml-auto mr-auto">
-						<div class="profile">
-							<div class="avatar">
-								<img src="https://t4.ftcdn.net/jpg/01/65/98/53/360_F_165985319_GPU5ALSAgJkkJ0rRE2V1d8plcen3aANg.jpg"
-									alt="Circle Image" class="img-raised rounded-circle img-fluid">
-							</div>
-							<div class="name">
-								<h3 class="title">(Member Name)</h3>
-								<h6>Member</h6>
-							</div>
-						</div>
-					</div>
-				</div> -->
-<!-- <div class="description text-center">
-					<p>Welcome to your reader profile. </p>
-				</div> -->
-<!-- <div class="row">
-					<div class="col-md-6 ml-auto mr-auto">
-						<div class="profile-tabs">
-							<ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
-								<li class="nav-item">
-									<a class="nav-link" href="newbook" role="tab">
-										<i class="material-icons">add</i>
-										Add Book
-									</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link active" href="booklist" role="tab">
-										<i class="material-icons">menu_book</i>
-										Booklist
-									</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="post/journal" role="tab">
-										<i class="material-icons">create</i>
-										Journal
-									</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="post/wishlist" role="tab">
-										<i class="material-icons">favorite</i>
-										Wishlist
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="tab-content tab-space">
-
-					</div>
-				</div> -->
-</div>
-</div>
-
-<!-- <footer class="footer text-center ">
-			<p>Made with <a href="https://demos.creative-tim.com/material-kit/index.html" target="_blank">Member Kit</a>
-			</p>
-		</footer> -->
 
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -155,9 +100,6 @@
 <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
 	integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous">
 </script>
-
-
-
 
 </body>
 
