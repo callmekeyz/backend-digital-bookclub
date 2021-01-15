@@ -23,7 +23,7 @@ const bookRouter = require('./routers/book');
 const memberRouter = require('./routers/member');
 
 app.use(logger);
-
+app.use(express.static('./public'));
 app.use(
 	express.urlencoded({
 		extended: true,

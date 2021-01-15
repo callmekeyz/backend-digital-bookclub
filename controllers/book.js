@@ -31,6 +31,7 @@ const processBookForm = async (req, res) => {
 
 const showBookList = async (req, res) => {
 	const { id } = req.session.user;
+
 	if (id) {
 		const books = await Book.findAll({
 			where: {
@@ -42,7 +43,6 @@ const showBookList = async (req, res) => {
 			locals: {
 				books,
 				title: Book.title,
-				status: Book.status,
 			},
 			...layout,
 		});
@@ -51,19 +51,18 @@ const showBookList = async (req, res) => {
 	}
 };
 
-const delBook = async (req, res) => {
+const viewBook = async (req, res) => {
 	const { id } = req.session.user;
 	const { bookId } = req.params;
 	if (id && bookId) {
-		const book = await Book.destroy({
-			where: {
-				id: bookId,
+		const book = await Book.findByPk(bookId);
+		console.log(`You are viewing Book item with id ${bookId}.`);
+		res.render('book', {
+			locals: {
+				book,
 			},
+			...layout,
 		});
-		console.log(`You deleted book item with id ${bookId}.`);
-		res.redirect('/list');
-	} else {
-		res.redirect('/');
 	}
 };
 
@@ -71,20 +70,17 @@ const showEditList = async (req, res) => {
 	const { id } = req.session.user;
 	const { bookId } = req.params;
 	if (id && bookId) {
-		const book = await Book.findOne({
-			where: {
-				id: bookId,
-			},
-		});
+		const book = await Book.findByPk(bookId);
+
 		console.log(`You are editing Book item with id ${bookId}.`);
-		res.render('booklist', {
+		res.render('edit', {
 			locals: {
 				book,
 			},
 			...layout,
 		});
 	} else {
-		res.redirect('/');
+		res.redirect('/member-profile');
 	}
 };
 
@@ -106,8 +102,24 @@ const processEditList = async (req, res) => {
 				},
 			}
 		);
-		console.log(`You updated Book item with id ${bookId}.`);
-		res.redirect('/list');
+    console.log(`You updated Book item with id ${bookId}.`);
+		res.redirect('/booklist');
+	} else {
+		res.redirect('/');
+	}
+};
+
+const delBook = async (req, res) => {
+	const { id } = req.session.user;
+	const { bookId } = req.params;
+	if (id && bookId) {
+		const book = await Book.destroy({
+			where: {
+				id: bookId,
+			},
+		});
+		console.log(`You deleted book item with id ${bookId}.`);
+		res.redirect('/booklist');
 	} else {
 		res.redirect('/');
 	}
@@ -120,4 +132,5 @@ module.exports = {
 	delBook,
 	showEditList,
 	processEditList,
+	viewBook,
 };

@@ -42,35 +42,47 @@
 
     <div class="container register-form">
         <div class="form">
+          <form method="POST">
             <div class="note" align=center>
                 <p>Add a Book</p>
             </div>
-
+          
             <div class="form-content">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Title *" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Genre *" value="" />
-                        </div>
+                            <input name="title" type="text" class="form-control" placeholder="Title"/>
+                          </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Author *" value="" />
+                            <input name="author" type="text" class="form-control" placeholder="Author"/>
                         </div>
+                     </div>
+                    <div class="col-md-6">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="ISBN *" value="" />
+                            <input name="genre" type="text" class="form-control" placeholder="Genre"/>
+                        </div>
+                    </div>
+                   <div class="col-md-6">
+                        <div class="form-group">
+                            <input name="isbn" type="text" class="form-control" placeholder="ISBN"/>
+                        </div>
+                  </div>
+                   <div class="col-md-6">
+                        <div class="form-group">
+                              <select id="status" name="status">
+                                <option value="wishlist">Wishlist</option>
+                                <option value="purchased">Purchased</option>
+                                <option value="reading">Currently Reading</option>
+                                <option value="completed">Completed</option>
+                              </select>
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btnSubmit">Submit</button>
+                <input type="submit" value="Submit">
             </div>
-        </div>
-    </div>
-
-
+         </form>
 
 
     <footer class="footer text-center ">
@@ -86,9 +98,49 @@
         integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous">
     </script>
 
+        <p>
+            <a href="member-profile">Back to Profile</a>
+        </p>
 
+          
+ <html>
+	<h1>${title}</h1>
 
+	<form method="POST">
+        <div class="form-group">
+            <label>
+                Title:
+                <input name="title" type="text" autofocus />
+            </label>
+        </div>
+    </br>
+        <div class="form-group">
+            <label>
+                Author:
+                <input name="author" type="text" />
+            </label>
+        </div>
+    </br>
+         <div class="form-group">
+            <label for="status">
+                Status: 
+            <select id="status" name="status">
+                 <option value="wishlist">Wishlist</option>
+                <option value="purchased">Purchased</option>
+                <option value="reading">Currently Reading</option>
+                <option value="completed">Completed</option>
+            </select>
+            </label>
+        </div>
+        </div>
+    </br>
 
-</body>
+        <input type="submit" value="Submit" />
+        <p>
+            <a href="member-profile">Back to Profile</a>
+        </p>
+	</form>
+</html>
 
 </html>
+
