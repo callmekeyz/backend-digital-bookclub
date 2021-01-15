@@ -2,6 +2,10 @@
 <html lang="en">
 
 <head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Book List</title>
+
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -158,70 +162,27 @@
 <body translate="no">
 	<h4>Book List</h4>
 	<hr>
-	<div class="border-card">
-		<div class="card-type-icon with-border">1</div>
-		<div class="content-wrapper">
-			<div class="label-group fixed">
-				<p class="title">EG links</p>
-				<p class="caption">Einheit</p>
-			</div>
-			<div class="min-gap"></div>
-			<div class="label-group">
-				<p class="title">Test</p>
-				<p class="caption">Eigentümer</p>
-			</div>
-			<div class="min-gap"></div>
-			<div class="label-group">
-				<p class="title">Alexander Oemisch</p>
-				<p class="caption">Mieter</p>
-			</div>
-			</a>
-		</div>
-		<i class="material-icons end-icon">more_vert</i>
-	</div>
-	<div class="border-card">
-		<div class="card-type-icon with-border">1</div>
-		<div class="content-wrapper">
-			<div class="label-group fixed">
-				<p class="title">EG links</p>
-				<p class="caption">Einheit</p>
-			</div>
-			<div class="min-gap"></div>
-			<div class="label-group">
-				<p class="title">Marc-Philipp Weber</p>
-				<p class="caption">Eigentümer</p>
-			</div>
-			<div class="min-gap"></div>
-			<div class="label-group">
-				<p class="title">Alexander Oemisch</p>
-				<p class="caption">Mieter</p>
-			</div>
-			</a>
-		</div>
-		<i class="material-icons end-icon">more_vert</i>
-	</div>
-	<div class="border-card">
-		<div class="card-type-icon with-border">1</div>
-		<div class="content-wrapper">
-			<div class="label-group fixed">
-				<p class="title">EG links</p>
-				<p class="caption">Einheit</p>
-			</div>
-			<div class="min-gap"></div>
-			<div class="label-group">
-				<p class="title">Marc-Philipp Weber</p>
-				<p class="caption">Eigentümer</p>
-			</div>
-			<div class="min-gap"></div>
-			<div class="label-group">
-				<p class="title">Alexander Oemisch</p>
-				<p class="caption">Mieter</p>
-			</div>
-			</a>
-		</div>
-		<i class="material-icons end-icon">more_vert</i>
-	</div>
+	<ul>
 
+
+		${ books.map(b => `
+		<li>
+			<div class="border-card">
+				<div class="card-type-icon with-border"></div>
+				<div class="content-wrapper">
+					<div class="label-group fixed">
+						<a href="${b.id}/viewbook"> ${b.title} </a>
+
+						`).join('') }
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+
+
+	<div class="min-gap"></div>
+	<i class="material-icons end-icon">more_vert</i>
 	<script
 		src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js">
 	</script>
@@ -261,21 +222,25 @@
 	</script>
 </body>
 
-</html>
 
-	
-
-	<!-- <body>
-		<h1>View member book list</h1>
+<!-- <h1>View member book list</h1>
 		<ul>
 			${ books.map(b => `
+
 			<li>
-				<a href="/book/${b.bookId}/booklist"> ${b.title} </a>
-				(${b.status})
+				<div>
+					<a href="${b.id}/viewbook"> ${b.title} </a>
+				</div>
 			</li>
+
+
 			`).join('') }
 		</ul>
 		<p><a href="member-profile">Back to Profile</a></p>
-	</body>
-</html> -->
+	</body> -->
 
+</html>
+
+
+
+</html>
