@@ -1,126 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Journal</title>
+    <style>
+      body {
+        margin-top: 20px;
+        background-image: url("/backend-digital-bookclub/images/login.jpg");
+      }
 
-	<title>Journal</title>
-	<style>
-		body {
-			margin-top: 20px;
-		}
+      ul.notes li {
+        margin: 10px 40px 50px 0px;
+        float: left;
+      }
 
-		ul.notes li {
-			margin: 10px 40px 50px 0px;
-			float: left;
-		}
+      ul.notes li,
+      ul.tag-list li {
+        list-style: none;
+      }
 
-		ul.notes li,
-		ul.tag-list li {
-			list-style: none;
-		}
+      ul.notes li div small {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 10px;
+        font-family: "Roboto";
+      }
 
-		ul.notes li div small {
-			position: absolute;
-			top: 5px;
-			right: 5px;
-			font-size: 10px;
-		}
+      div.rotate-1 {
+        -webkit-transform: rotate(-6deg);
+        -o-transform: rotate(-6deg);
+        -moz-transform: rotate(-6deg);
+      }
 
-		div.rotate-1 {
-			-webkit-transform: rotate(-6deg);
-			-o-transform: rotate(-6deg);
-			-moz-transform: rotate(-6deg);
-		}
+      div.rotate-2 {
+        -o-transform: rotate(4deg);
+        -webkit-transform: rotate(4deg);
+        -moz-transform: rotate(4deg);
+        position: relative;
+        top: 5px;
+      }
 
-		div.rotate-2 {
-			-o-transform: rotate(4deg);
-			-webkit-transform: rotate(4deg);
-			-moz-transform: rotate(4deg);
-			position: relative;
-			top: 5px;
-		}
+      .lazur-bg {
+        background-color: #23c6c8;
+        color: #ffffff;
+      }
 
-		.lazur-bg {
-			background-color: #23c6c8;
-			color: #ffffff;
-		}
+      .red-bg {
+        background-color: #ed5565;
+        color: #ffffff;
+      }
 
-		.red-bg {
-			background-color: #ed5565;
-			color: #ffffff;
-		}
+      .navy-bg {
+        background-color: #1ab394;
+        color: #ffffff;
+      }
 
-		.navy-bg {
-			background-color: #1ab394;
-			color: #ffffff;
-		}
+      .yellow-bg {
+        background-color: #f8ac59;
+        color: #ffffff;
+      }
 
-		.yellow-bg {
-			background-color: #f8ac59;
-			color: #ffffff;
-		}
+      ul.notes li div {
+        text-decoration: none;
+        color: #000;
+        display: block;
+        height: 210px;
+        width: 210px;
+        padding: 1em;
+        -moz-box-shadow: 5px 5px 7px #212121;
+        -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+        box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+        -moz-transition: -moz-transform 0.15s linear;
+        -o-transition: -o-transform 0.15s linear;
+        -webkit-transition: -webkit-transform 0.15s linear;
+      }
+    </style>
+  </head>
 
-		ul.notes li div {
-			text-decoration: none;
-			color: #000;
-			display: block;
-			height: 210px;
-			width: 210px;
-			padding: 1em;
-			-moz-box-shadow: 5px 5px 7px #212121;
-			-webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
-			box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
-			-moz-transition: -moz-transform 0.15s linear;
-			-o-transition: -o-transform 0.15s linear;
-			-webkit-transition: -webkit-transform 0.15s linear;
-		}
-	</style>
-</head>
-
-<body>
-	<div class="container bootstrap snippets bootdey">
-		<div class="row">
-			<ul class="notes">
-				<li>
-					<div class="rotate-1 lazur-bg">
-						<small>12:03:28 12-04-2014</small>
-						<h4>Awesome title</h4>
-						<p>The years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-						<a href="#" class="text-danger pull-right"><i class="fa fa-trash-o "></i></a>
-					</div>
-				</li>
-				<li>
-					<div class="rotate-2 red-bg">
-						<small>12:03:28 12-04-2014</small>
-						<h4>Awesome date</h4>
-						<p>The years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-						<a href="#" class="text-danger pull-right"><i class="fa fa-trash-o "></i></a>
-					</div>
-				</li>
-				<li>
-					<div class="rotate-1 yellow-bg">
-						<small>12:03:28 12-04-2014</small>
-						<h4>Awesome project</h4>
-						<p>The years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-						<a href="#" class="text-danger pull-right"><i class="fa fa-trash-o "></i></a>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-</body>
-
+  <body>
+    <div class="container bootstrap snippets bootdey">
+      <div class="row">
+        <ul class="notes">
+          <li>
+            <div class="rotate-1 lazur-bg">
+              <small>12:03:28 </small>
+              <h4>A NEW EARTH</h4>
+              <p>CH 1: I'm reevaluating my entire life!😩</p>
+              <a href="#" class="text-danger pull-right"
+                ><i class="fa fa-trash-o"></i
+              ></a>
+            </div>
+          </li>
+          <li>
+            <div class="rotate-2 red-bg">
+              <small>12:03:28 </small>
+              <h4>SCIENCE AND THE AKASHIC FIELD</h4>
+              <p>The phenomenon of coherence...🤯</p>
+              <a href="#" class="text-danger pull-right"
+                ><i class="fa fa-trash-o"></i
+              ></a>
+            </div>
+          </li>
+          <li>
+            <div class="rotate-1 yellow-bg">
+              <small>12:03:28 </small>
+              <h4>YOU ARE THE UNIVERSE</h4>
+              <p>
+                “Humans are in the ironic position of knowing for certain that
+                we have a mind, while at the same time finding that our mind
+                can’t explain itself.” 🌻
+              </p>
+              <a href="#" class="text-danger pull-right"
+                ><i class="fa fa-trash-o"></i
+              ></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
 </html>
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Journal</title>
-	</head>
-	<body>
-		<h1>Member Journal</h1>
-	</body>
-</html>
-
