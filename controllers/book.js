@@ -102,7 +102,7 @@ const processEditList = async (req, res) => {
 				},
 			}
 		);
-		console.log(`You updated Book item with id ${bookId}.`);
+    console.log(`You updated Book item with id ${bookId}.`);
 		res.redirect('/booklist');
 	} else {
 		res.redirect('/');

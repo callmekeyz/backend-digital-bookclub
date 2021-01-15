@@ -1,44 +1,109 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+	<link rel="stylesheet"
+		href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+		integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css"
+		href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+	<link rel="stylesgeet"
+		href="https://rawgit.com/creativetimofficial/material-kit/master/assets/css/material-kit.css"> -->
+
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<style>
+		.note {
+			text-align: center;
+			height: 80px;
+			background: -webkit-linear-gradient(left, #61e290, #8811c5);
+			color: #fff;
+			font-weight: bold;
+			line-height: 80px;
+		}
+
+		.form-content {
+			padding: 5%;
+			border: 1px solid #ced4da;
+			margin-bottom: 2%;
+		}
+
+		.form-control {
+			border-radius: 1.5rem;
+		}
+
+		.btnSubmit {
+			border: none;
+			border-radius: 1.5rem;
+			padding: 1%;
+			width: 20%;
+			cursor: pointer;
+			background: #8811c5;
+			color: #fff;
+		}
+	</style>
+</head>
 
 <body>
-	<div class="container">
-		<form align="center" method="POST">
-			<p>
-			<h2>Become a Member!</h2>
-			</p>
-			<div class="form-group">
-				<label>
-					First Name:
-					<input name="firstname" type="text" placeholder="Enter first name" autofocus />
-				</label>
+
+	<div class="container register-form">
+		<div class="form">
+			<div class="note" align=center>
+				<p>Create Member Account</p>
 			</div>
-			</br>
-			<div class="form-group">
-				<label>
-					Last Name:
-					<input name="lastname" type="text" />
-				</label>
+
+			<div class="form-content">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Your Name *" value="" />
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Phone Number *" value="" />
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Your Password *" value="" />
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Confirm Password *" value="" />
+						</div>
+					</div>
+				</div>
+				<button type="button" class="btnSubmit">Submit</button>
 			</div>
-			</br>
-			<div class="form-group">
-				<label>
-					Username:
-					<input name="username" type="text" />
-				</label>
-			</div>
-			</br>
-			<div class="form-group">
-				<label>
-					Password:
-					<input name="password" type="password" />
-				</label>
-			</div>
+
+		</div>
 			</br>
 			<div class="form-group">
 				<input type="submit" value="Submit" />
 			<p><a href="home">Home</a></p>
-		</form>
+
 	</div>
+
+
+
+
+	<footer class="footer text-center ">
+
+	</footer>
+
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+		integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous">
+	</script>
+	<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+		integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous">
+	</script>
+
+
+
+
 </body>
 
 </html>
